@@ -24,50 +24,12 @@
 */
 var NAVTREE =
 [
-  [ "ClusterDuck Protocol", "index.html", [
-    [ "ClusterDuck Protocol Info", "index.html", [
-      [ "About", "index.html#autotoc_md1", null ],
-      [ "Origin Story", "index.html#autotoc_md2", null ],
-      [ "How It Works", "index.html#autotoc_md3", null ],
-      [ "Getting Started", "index.html#autotoc_md4", null ],
-      [ "How to Contribute", "index.html#autotoc_md5", null ],
-      [ "Join the Conversation", "index.html#autotoc_md6", null ]
-    ] ],
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
-      ] ]
-    ] ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
-      ] ]
-    ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", null ]
-      ] ]
-    ] ]
-  ] ]
+  [ "ClusterDuck Protocol", "index.html", ]
 ];
 
 var NAVTREEINDEX =
 [
-"_duck_8cpp.html",
-"globals_vars.html"
+"index.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
