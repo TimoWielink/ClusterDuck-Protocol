@@ -63,7 +63,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('_duck_radio_8h.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -88,39 +88,44 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">ClusterDuck Protocol Info </div></div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle"><div class="title">DuckRadio.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_main"></a> </p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-About</h1>
-<p>The ClusterDuck Protocol is an open-source firmware for creating mesh network Internet-of-Things devices leveraging LoRa radio technology, with optional WiFi and Bluetooth compatibility. Designed for rapid deployment, this protocol facilitates wireless communication, sensor integration, and network device connectivity in areas lacking conventional infrastructure.</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Origin Story</h1>
-<p>Emerging from the devastating aftermath of Hurricane Maria in 2017, the ClusterDuck Protocol by OWL Integrations enables essential communication in disaster-stricken regions through a mobile mesh network accessible without pre-downloaded software. The protocol's development was inspired by the need for a reliable, low-cost, and easy-to-deploy communication solution in disaster relief scenarios.</p>
-<h1><a class="anchor" id="autotoc_md3"></a>
-How It Works</h1>
-<p>The protocol's network consists of nodes known as <b>Ducks</b>, playing one of three core roles:</p><ul>
-<li><b>DuckLinks</b>: Edge nodes transmitting data, acting as remote sensors or portal access points.</li>
-<li><b>MamaDucks</b>: Nodes receiving and repeating messages, bridging DuckLinks and the network's backbone.</li>
-<li><b>PapaDucks</b>: The network's culmination points, aggregating data for storage or cloud upload.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
-Getting Started</h1>
-<p><a href="https://github.com/ClusterDuck-Protocol/ClusterDuck-Protocol/blob/master/DEVELOPER_GUIDE.md">Installation steps and initial setup guide.</a></p>
-<h1><a class="anchor" id="autotoc_md5"></a>
-How to Contribute</h1>
-<p>Join our vibrant community in enhancing and expanding the ClusterDuck Protocol. Whether it's code contributions, documentation, or community support, find out how you can make a difference in our <a href="https://discord.gg/Cbgbzq353z">Discord</a>.</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
-Join the Conversation</h1>
-<p>Dive deeper into the ClusterDuck community, seek support, and share your projects on our <a href="https://discord.gg/Cbgbzq353z">Discord</a> server! </p>
-</div></div><!-- PageDoc -->
-</div><!-- contents -->
+
+<p>This file is internal to CDP and provides the library access to onboard LoRa module functions as well as packet management.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &quot;../DuckDisplay.h&quot;</code><br />
+<code>#include &quot;../DuckError.h&quot;</code><br />
+<code>#include &quot;../DuckLogger.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="cdpcfg_8h_source.html">cdpcfg.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_duck_packet_8h_source.html">DuckPacket.h</a>&quot;</code><br />
+</div>
+<p><a href="_duck_radio_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_lora_config_params.html">LoraConfigParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal structure to hold the LoRa module configuration.  <a href="struct_lora_config_params.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_duck_radio.html">DuckRadio</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal Radio chip abstraction.  <a href="class_duck_radio.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This file is internal to CDP and provides the library access to onboard LoRa module functions as well as packet management. </p>
+<dl class="section version"><dt>Version</dt><dd></dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2020-09-16</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd></dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath" ><!-- id is needed for treeview function! -->
   <ul>
+      <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="_duck_radio_8h.html">DuckRadio.h</a></li>
       <li class="footer"><a href="https://github.com/ClusterDuck-Protocol/ClusterDuck-Protocol/wiki" target="_blank">Wiki</a></li>
       <li class="footer"><a href="https://github.com/ClusterDuck-Protocol/ClusterDuck-Protocol" target="_blank">GitHub</a></li>
       <li class="footer"><a href="https://clusterduckprotocol.org/" target="_blank">Project Page</a></li>

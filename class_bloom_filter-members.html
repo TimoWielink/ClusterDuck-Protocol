@@ -63,7 +63,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('class_bloom_filter.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -88,35 +88,25 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">ClusterDuck Protocol Info </div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">BloomFilter Member List</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_main"></a> </p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-About</h1>
-<p>The ClusterDuck Protocol is an open-source firmware for creating mesh network Internet-of-Things devices leveraging LoRa radio technology, with optional WiFi and Bluetooth compatibility. Designed for rapid deployment, this protocol facilitates wireless communication, sensor integration, and network device connectivity in areas lacking conventional infrastructure.</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Origin Story</h1>
-<p>Emerging from the devastating aftermath of Hurricane Maria in 2017, the ClusterDuck Protocol by OWL Integrations enables essential communication in disaster-stricken regions through a mobile mesh network accessible without pre-downloaded software. The protocol's development was inspired by the need for a reliable, low-cost, and easy-to-deploy communication solution in disaster relief scenarios.</p>
-<h1><a class="anchor" id="autotoc_md3"></a>
-How It Works</h1>
-<p>The protocol's network consists of nodes known as <b>Ducks</b>, playing one of three core roles:</p><ul>
-<li><b>DuckLinks</b>: Edge nodes transmitting data, acting as remote sensors or portal access points.</li>
-<li><b>MamaDucks</b>: Nodes receiving and repeating messages, bridging DuckLinks and the network's backbone.</li>
-<li><b>PapaDucks</b>: The network's culmination points, aggregating data for storage or cloud upload.</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
-Getting Started</h1>
-<p><a href="https://github.com/ClusterDuck-Protocol/ClusterDuck-Protocol/blob/master/DEVELOPER_GUIDE.md">Installation steps and initial setup guide.</a></p>
-<h1><a class="anchor" id="autotoc_md5"></a>
-How to Contribute</h1>
-<p>Join our vibrant community in enhancing and expanding the ClusterDuck Protocol. Whether it's code contributions, documentation, or community support, find out how you can make a difference in our <a href="https://discord.gg/Cbgbzq353z">Discord</a>.</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
-Join the Conversation</h1>
-<p>Dive deeper into the ClusterDuck community, seek support, and share your projects on our <a href="https://discord.gg/Cbgbzq353z">Discord</a> server! </p>
-</div></div><!-- PageDoc -->
-</div><!-- contents -->
+
+<p>This is the complete list of members for <a class="el" href="class_bloom_filter.html">BloomFilter</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_bloom_filter.html#a9324ec548ffba472c579dc4a0655c4f4">bloom_add</a>(unsigned char *msg, int msgSize)</td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_bloom_filter.html#ae976246f2899c2b10166a25e026c91c5">bloom_check</a>(unsigned char *msg, int msgSize)</td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bloom_filter.html#a64e9f133cd9bb65d55a5e31f701bbca0">BloomFilter</a>()</td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_bloom_filter.html#aba4255db5abc946c5d89826e026cc4b8">BloomFilter</a>(int numSectors, int numHashes, int bitsPerSector, int maxMsgs)</td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bloom_filter.html#a37d4fd86dd5e960d606f6abfda4f3ce3">BloomFilterTester</a></td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_bloom_filter.html#af01868484be21e1735c617db8758e9fe">get_bitsPerSector</a>()</td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bloom_filter.html#a2fe6a3e759a5b752f3c49a674064a24a">get_maxMsgs</a>()</td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_bloom_filter.html#adeb7e046bdb08e38c0fd0accfee3edc3">get_nMsg</a>()</td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bloom_filter.html#a028bbd0e8487aa7121987bc8785f0d5a">get_numHashes</a>()</td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_bloom_filter.html#a789ecd421bc4c7a3cabfe514e7cd0c02">get_numSectors</a>()</td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bloom_filter.html#a27358192f6e0d7aba2b24be36c5d3580">~BloomFilter</a>()</td><td class="entry"><a class="el" href="class_bloom_filter.html">BloomFilter</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath" ><!-- id is needed for treeview function! -->
