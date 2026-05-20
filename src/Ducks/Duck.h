@@ -382,28 +382,34 @@ class Duck {
     static bool sendSignalData(void* p){
       Duck* duckInstance = static_cast<Duck*>(p);
       int err;
+      loginfo_ln("[DUCK] sendSignalData timer fired.");
       duckInstance->router.cullRoutingTable();
       std::optional<std::string> message = duckInstance->router.getEntriesFor(PAPADUCK_DUID, duckInstance->duid);
 
       if(message.has_value()){
-        loginfo_ln("signal data: %s", message.value().c_str());
+        loginfo_ln("[DUCK] signal data: %s", message.value().c_str());
         err = duckInstance->sendData(topics::sig, message.value());
         if (err != DUCK_ERR_NONE) {
-          logdbg_ln("[DUCK] signal info for DMS message failed to send.");
+          loginfo_ln("[DUCK] signal info for DMS message failed to send. rc=%d", err);
         } else {
-          logdbg_ln("[DUCK] signal info for DMS message successfully sent.");
+          loginfo_ln("[DUCK] signal info for DMS message successfully sent.");
         }
-      } else { 
-        logdbg_ln("[DUCK] No route entry for specified target was found.");
+      } else {
+        loginfo_ln("[DUCK] No neighbors in routing table — sending empty signal packet.");
         JsonDocument doc;
         doc["s"] = duckutils::toString(duckInstance->duid);
         JsonArray neighborsArr = doc.createNestedArray("n");
         std::string jsonString;
         serializeJson(doc, jsonString);
-        
+
         err = duckInstance->sendData(topics::sig, jsonString);
+        if (err != DUCK_ERR_NONE) {
+          loginfo_ln("[DUCK] empty signal packet failed to send. rc=%d", err);
+        } else {
+          loginfo_ln("[DUCK] empty signal packet sent: %s", jsonString.c_str());
+        }
       }
-      
+
       return true;
     }
 

@@ -72,28 +72,25 @@ void DuckRouter::cullRoutingTable(size_t maxSize) {
 };
 
 std::optional<std::string> DuckRouter::getEntriesFor(Duid targetDuid, Duid thisDuck){
-    auto target = routingTable.find(duckutils::toString(targetDuid));
-    JsonDocument doc;
-
-    if (target == routingTable.end()) {
+    if (routingTable.empty()) {
         return std::nullopt;
     }
 
+    JsonDocument doc;
     doc["s"] = duckutils::toString(thisDuck);
     JsonArray neighborsArr = doc.createNestedArray("n");
 
-    auto entry = target->second.begin();
-    while(entry != target->second.end()){
-        JsonArray node = neighborsArr.createNestedArray();
-        node.add(duckutils::toString(entry->getDuid()));
-        node.add(entry->getRssi());
-        node.add(entry->getSnr());
-        entry++;
+    for (auto& [key, neighborList] : routingTable) {
+        for (auto& entry : neighborList) {
+            JsonArray node = neighborsArr.createNestedArray();
+            node.add(duckutils::toString(entry.getDuid()));
+            node.add(entry.getRssi());
+            node.add(entry.getSnr());
+        }
     }
 
     std::string jsonString;
     serializeJson(doc, jsonString);
-
     return jsonString;
 }
 
